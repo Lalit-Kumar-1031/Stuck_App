@@ -29,4 +29,13 @@ class PostModel{
  department=post.get("department");
  caption=post.get("caption");
  }
+ fromMap(Map<String,dynamic>post){
+post_url=post["post_url"];
+ profile_url=post["profile_url"];
+ email=post["email"];
+ id=post["id"];
+ name=post["name"];
+ department=post["department"];
+ caption=post["caption"];
+ }
 }

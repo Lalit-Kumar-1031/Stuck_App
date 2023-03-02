@@ -42,30 +42,40 @@ List<String> branch=[];
 
 final List<String> department=[
   "University Institute of Engineering & Technology",
-  "Department of Law",
+  "Intitute of Law",
   "Department of Commerce",
-
+  "Institute of Teacher Training & Research",
+  "Institute of Integrated & Hons. Studies",
+  "Institute of Environmental Studies",
+  "Institute of Management Studies",
+  "Institute of Mass Communication & Media Technology",
+  "University School of Management"
+  "Department of Instrumentation",
+  "Institute of Pharmaceuticals",
+  "Tourism Hotel Management"
 ];
 
 Map<String,List<String>>departmentToCourse={
-  "University Institute of Engineering & Technology":["BTech","MTech"],
-   "Department of Law":["Bachelor In Law","Master In Law","Ph.D"],
-   "Department of Commerce":["M.Phil","Master In Commerce"],
+  "Tourism Hotel Management":["BHM & CT","MTTM","MHM & CT","Ph.D (Hotel Management)","Ph.D (Tourism)"],
+  "Institute of Pharmaceuticals":["B.Pharmacy","M. Pharmacy",'Ph.D(Pharmacy)'],
+  "Department of Instrumentation":["BTech"],
+  "University Institute of Engineering & Technology":["Bachelor's of Technology","Master's of Technology"],
+   "Instititue of Law":["Bachelor's In Law","Master's In Law","Ph.D"],
+   "Department of Commerce":["Master's in Philosphy","Master's In Commerce"],
 };
 Map<String,List<String>>courseToBranch={
-  "BTech":["CSE","ECE","BT","ME"],
-  "MTech":["CSE","ECE","BT","ME","EE","ME Production","Me Thermal","DT"],
-
-  "Bachelor In Law":["LL.B"],
-  "Master In Law":["LL.M"],
+  "BTech":["BTech (Electrical & Instrumentation Engineering)"],
+  "Bachelor's of Technology":["Computer Science & Engineering","Electronics & Communication Engineering","Biotechnology","Mechanical Engineering"],
+  "Master's of Technology":["Computer Science & Engineering","Electronics & Communication Engineering","Biotechnology","Mechanical Engineering","Electrical Engineering","Mechanical Engineering","Me Thermal","DT"],
+  "Bachelor's In Law":["LL.B"],
+  "Master's In Law":["LL.M"],
   "Ph.D":["Ph.D(Law)"],
-
+  "B.Pharmacy":[],
   "M.Phil":["M Phil(Commerce)"],
   "Master In Commerce":["M.Com"]
 
 };
 
-
-List<String> genter=['Male','Female','Others'];
+List<String> gender=['Male','Female','Others'];
 
 List<String> graduationyear=['2023','2024','2025','2026','2027','2028','2029','2030'];

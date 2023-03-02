@@ -196,7 +196,7 @@ class _UserDetailPageState extends State<UserDetailPage> {
                                 value: selectgender,
                                 hint: Text("- Select Gender -"),
                                 borderRadius: BorderRadius.circular(10),
-                                items: genter.map((e) {
+                                items: gender.map((e) {
                                   return DropdownMenuItem(
                                     child: Text(e),
                                     value: e,

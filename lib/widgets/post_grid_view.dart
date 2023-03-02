@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:stuck/main.dart';
+import 'package:stuck/models/post_model.dart';
+import 'package:stuck/screens/user_profile_post_screen.dart';
 import '../models/user_model.dart';
 class PostGridView extends StatefulWidget {
   User user;
@@ -35,12 +37,20 @@ class _PostGridViewState extends State<PostGridView> {
     if(snapshot.hasData){
     pics=
     snapshot.data!.docs.map((e){
-      var data=e.data() as Map<String,dynamic> ;
+      var val=e.data();
+      var data=val as Map<String,dynamic> ;
+      PostModel post=PostModel();
+      post.fromMap(data);
       print(data["post_url"]);
-    return Container(
-      height: size.width*0.33333,
-      width: size.width*0.33333,
-      child: Image.network(data["post_url"],fit: BoxFit.cover,),);
+    return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>UserProfilePostScreen(post)));
+      },
+      child: Container(
+        height: size.width*0.33333,
+        width: size.width*0.33333,
+        child: Image.network(data["post_url"],fit: BoxFit.cover,),),
+    );
     }
     ).toList();
     return Expanded(

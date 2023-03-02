@@ -1,4 +1,6 @@
 import 'dart:typed_data';
+import 'package:stuck/screens/bottom_tab_screen.dart';
+import 'package:stuck/utils/Utils.dart';
 import 'package:stuck/widgets/custom_text_field.dart';
 
 import '../models/user_model.dart' as umd;
@@ -37,7 +39,9 @@ class _AddPostScreenState extends State<AddPostScreen> {
             Icons.arrow_back,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            
+          },
         ),
         title: Text(
           "Post",
@@ -49,6 +53,10 @@ class _AddPostScreenState extends State<AddPostScreen> {
               onPressed: () async{
                var res=await Storage().uplaodPost(image!, user,_captionController.text);
               print(res);
+              if(res=="Success"){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BottomTabScreen()));
+                Utils().showSnackBar(context: context, content:"Post uploaded successfully");
+              }
               },
               child: Text(
                 "Publish",
