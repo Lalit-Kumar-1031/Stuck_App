@@ -26,7 +26,7 @@ void main() async{
   child:MaterialApp(
     debugShowCheckedModeBanner: false,
     //home:UserDetailPage(),
-    //home:SplashScreen(),
-    home: BottomTabScreen(),
+    home:SplashScreen(),
+   // home: BottomTabScreen(),
   )));
 }
